@@ -64,6 +64,8 @@ public class Data
 
     public int[] Dungeon_Clear_Level  = { 0, 0 };
 
+    public bool ADS_Remove = false;
+
 }
 public class Data_Mng
 {

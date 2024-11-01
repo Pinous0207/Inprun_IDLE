@@ -6,7 +6,6 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class Main_UI : MonoBehaviour
 {
@@ -20,6 +19,7 @@ public class Main_UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_Money_Text;
     [SerializeField] private TextMeshProUGUI m_Stage_Count_Text;
     [SerializeField] private TextMeshProUGUI m_Stage_Text;
+    [SerializeField] private TextMeshProUGUI m_Dia_Text;
     // Color = (float,float,float,float)
     //            R     G     B     A
     Color m_Stage_Color = new Color(0, 0.7295136f, 1.0f, 1.0f);
@@ -605,6 +605,7 @@ public class Main_UI : MonoBehaviour
         int stageBack = stageValue % 10;
 
         m_Stage_Count_Text.text = "∫∏≈Î " + stageForward.ToString() + " - " + stageBack.ToString();
+        m_Dia_Text.text = Data_Mng.m_Data.Dia.ToString();
     }
 
     private void GetLegendaryPopUP(Item_Scriptable item)

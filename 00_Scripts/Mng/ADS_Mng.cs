@@ -78,6 +78,16 @@ public class ADS_Mng
     {
         _rewardedCallback = rewardCallback;
 
+        if(Data_Mng.m_Data.ADS_Remove)
+        {
+            if (_rewardedCallback != null)
+            {
+                _rewardedCallback?.Invoke();
+                _rewardedCallback = null;
+            }
+            return;
+        }
+
         if (_rewardedAd != null && _rewardedAd.CanShowAd())
         {
             _rewardedAd.Show((Reward reward) =>

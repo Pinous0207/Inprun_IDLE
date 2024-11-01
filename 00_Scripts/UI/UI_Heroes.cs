@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 public class UI_Heroes : UI_Base
 {
     public Transform Content;

@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class SpeechBubble : MonoBehaviour
 {

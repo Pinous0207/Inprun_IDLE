@@ -1,4 +1,10 @@
 
+public enum IAP_Holder
+{
+    removeads,
+    dia300
+}
+
 public enum Status_Holder
 {
     ATK, // °ø°Ý·Â

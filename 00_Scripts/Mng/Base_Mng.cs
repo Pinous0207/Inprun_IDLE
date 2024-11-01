@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 // 모든 매니저 스크립트의 집합체
 public class Base_Mng : MonoBehaviour
@@ -20,6 +17,7 @@ public class Base_Mng : MonoBehaviour
     private static Character_Mng s_Character = new Character_Mng();
     private static ADS_Mng s_ADS = new ADS_Mng();
     private static Firebase_Mng s_Firebase = new Firebase_Mng();
+    private static IAP_Mng s_IAP = new IAP_Mng();
     public static Pool_Mng Pool { get { return s_Pool; } }
     public static Player_Mng Player { get { return s_Player; } }
     public static Data_Mng Data { get { return s_Data; } }
@@ -28,6 +26,7 @@ public class Base_Mng : MonoBehaviour
     public static Character_Mng Character { get { return s_Character; } }
     public static ADS_Mng ADS { get { return s_ADS; } }
     public static Firebase_Mng Firebase { get { return s_Firebase; } }
+    public static IAP_Mng IAP { get { return s_IAP; } }
     #endregion
 
     public static bool isFast = false;
@@ -69,6 +68,7 @@ public class Base_Mng : MonoBehaviour
             Pool.Initalize(transform);
             ADS.Init();
             Firebase.Init();
+            IAP.InitUnityIAP();
 
             DontDestroyOnLoad(this.gameObject);
         }

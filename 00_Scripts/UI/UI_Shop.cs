@@ -24,6 +24,11 @@ public class UI_Shop : UI_Base
         return base.Init();
     }
 
+    public void GetProduct(string name)
+    {
+        Base_Mng.IAP.Purchase(name);
+    }
+
     public void GetInit()
     {
         H_LevelText.text = "영웅 소환 레벨 Lv." + (Utils.Summon_Level(Data_Mng.m_Data.Hero_Summon_Count) + 1).ToString();
