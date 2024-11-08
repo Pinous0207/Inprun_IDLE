@@ -1,4 +1,11 @@
 
+public enum Sound
+{
+    BGM,
+    Effect,
+    Max
+}
+
 public enum IAP_Holder
 {
     removeads,

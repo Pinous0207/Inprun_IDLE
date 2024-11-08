@@ -6,7 +6,7 @@ using UnityEngine;
 public partial class Firebase_Mng
 {
     private FirebaseAuth auth;
-    private FirebaseUser currentUser;
+    public FirebaseUser currentUser;
     private DatabaseReference reference;
 
     public void Init()

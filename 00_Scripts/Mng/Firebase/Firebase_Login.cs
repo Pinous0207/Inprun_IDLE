@@ -19,6 +19,10 @@ public partial class Firebase_Mng
                 return;
             }
             FirebaseUser user = task.Result.User;
+
+            PlayerPrefs.SetFloat("BGM", 1.0f);
+            PlayerPrefs.SetFloat("VFX", 1.0f);
+
             Debug.Log("게스트 로그인 성공! 사용자 ID : " + user.UserId);
             ReadData();
         });

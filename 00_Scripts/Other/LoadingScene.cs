@@ -21,6 +21,8 @@ public class LoadingScene : MonoBehaviour
 
     private void Start()
     {
+        Base_Mng.Sound.Play(Sound.BGM, "Lobby");
+
         versionText.text = "App Version." + Application.version;
         sliderParent = slider.transform.parent.gameObject;
     }

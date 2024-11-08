@@ -24,6 +24,8 @@ public class Base_Canvas : MonoBehaviour
             Get_UI("#Offline");
         }
 
+        Base_Mng.Sound.Play(Sound.BGM, "Main");
+
         STATUS_BUTTON.onClick.AddListener(() => Get_UI("#Stat", true, true, true, 0));
 
         HERO_BUTTON.onClick.AddListener(() => Get_UI("#Heros", true, true, true, 1));
@@ -42,6 +44,7 @@ public class Base_Canvas : MonoBehaviour
             isSave = true;
         });
         ADSBUFF_BUTTON.onClick.AddListener(() => Get_UI("#ADS_Buff"));
+        SETTING_BUTTON.onClick.AddListener(() => Get_UI("#Setting"));
     }
 
     public Transform COIN;
@@ -57,7 +60,8 @@ public class Base_Canvas : MonoBehaviour
         SHOP_BUTTON,
         INVENTORY_BUTTON, 
         SAVINGMODE_BUTTON,
-        ADSBUFF_BUTTON;
+        ADSBUFF_BUTTON,
+        SETTING_BUTTON;
 
     [HideInInspector] public PopUp_UI popup = null;
     [HideInInspector] public UI_Base m_UI;

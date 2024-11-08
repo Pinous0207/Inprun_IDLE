@@ -12,6 +12,7 @@ public class Dice : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        Base_Mng.Sound.Play(Sound.Effect, "Dice");
         StartCoroutine(CoinBlast());
     }
 

@@ -55,6 +55,7 @@ public class Camera_Manager : MonoBehaviour
 
     public void CameraShake()
     {
+        if (PlayerPrefs.GetInt("CAM") == 1) return;
         if (isCameraShake) return;
         isCameraShake = true;
         StartCoroutine(CameraShake_Coroutine());

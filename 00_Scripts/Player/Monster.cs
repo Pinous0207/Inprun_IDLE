@@ -117,6 +117,7 @@ public class Monster : Character
         if (isDead) return;
 
         bool critical = Critical(ref dmg);
+        Base_Mng.Sound.Play(Sound.Effect, "Hit");
 
         Base_Mng.Pool.Pooling_OBJ("HIT_TEXT").Get((value) =>
         {

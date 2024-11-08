@@ -15,12 +15,14 @@ public class UI_Base : MonoBehaviour
 
     private void Start()
     {
+        Base_Mng.Sound.Play(Sound.Effect, "Click");
         Init();
     }
 
     public virtual void DisableOBJ()
     {
         Utils.UI_Holder.Pop();
+        Base_Mng.Sound.Play(Sound.Effect, "Click");
         Destroy(this.gameObject);
     }
 }
