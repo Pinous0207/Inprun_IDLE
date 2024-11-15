@@ -8,6 +8,22 @@ public class UI_Setting : UI_Base
     public Slider BGM, VFX;
     public TextMeshProUGUI UniqueID;
     public Image CheckBox;
+    public GameObject ChangeLanguagePanel;
+    public TextMeshProUGUI NoneChangeText, GetChangeText;
+    string saveLang;
+    public void GetChangeLanguage(string lang)
+    {
+        saveLang = lang;
+        ChangeLanguagePanel.SetActive(true);
+        NoneChangeText.text = Local_Mng.local_Data["UI/ChangeLanguage"].Get_Data();
+        GetChangeText.text = Local_Mng.local_Data["UI/ChangeLanguage"].Get_Data(lang);
+    }
+
+    public void Yes()
+    {
+        PlayerPrefs.SetString("LOCAL", saveLang);
+        Application.Quit();
+    }
 
     public override bool Init()
     {
@@ -33,6 +49,8 @@ public class UI_Setting : UI_Base
         PlayerPrefs.SetInt("CAM", CameraShakeCheck() == true ? 1 : 0);
         CameraShakeCheck();
     }
+
+  
 
     public void ApplicationURL(string url)
     {

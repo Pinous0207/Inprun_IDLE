@@ -226,9 +226,9 @@ public class Main_UI : MonoBehaviour
             if (m_Item_Texts[i].gameObject.activeSelf == false)
             {
                 m_Item_Texts[i].gameObject.SetActive(true);
-                m_Item_Texts[i].text = "æ∆¿Ã≈€¿ª »πµÊ«œø¥Ω¿¥œ¥Ÿ : " + Utils.String_Color_Rarity(item.rarity)+ "[" + item.Item_Name + "]</color>";
+                m_Item_Texts[i].text = string.Format(Local_Mng.local_Data["PopUP/GetItem"].Get_Data(), Utils.String_Color_Rarity(item.rarity) + "[" + item.Item_Name + "]</color>");
 
-                for(int j = 0; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
                     RectTransform rect = m_Item_Texts[j].GetComponent<RectTransform>();
                     rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y + 50.0f);
@@ -266,7 +266,7 @@ public class Main_UI : MonoBehaviour
                     m_Item_Texts[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(0.0f, 0.0f);
 
                     m_Item_Texts[i].gameObject.SetActive(true);
-                    m_Item_Texts[i].text = "æ∆¿Ã≈€¿ª »πµÊ«œø¥Ω¿¥œ¥Ÿ : " + Utils.String_Color_Rarity(item.rarity) + "[" + item.Item_Name + "]</color>";
+                    m_Item_Texts[i].text = string.Format(Local_Mng.local_Data["PopUP/GetItem"].Get_Data(), Utils.String_Color_Rarity(item.rarity) + "[" + item.Item_Name + "]</color>");
 
                     if (m_Item_Coroutines[i] != null)
                     {
@@ -622,7 +622,7 @@ public class Main_UI : MonoBehaviour
         m_PopUp_Image.sprite = Utils.Get_Atlas(item.name);
         m_PopUp_Image.SetNativeSize();
 
-        m_PopUp_Text.text = Utils.String_Color_Rarity(item.rarity) + item.Item_Name + "</color>¿ª(∏¶) »πµÊ«œø¥Ω¿¥œ¥Ÿ.";
+        m_PopUp_Text.text = string.Format(Local_Mng.local_Data["PopUP/GetItem02"].Get_Data(), Utils.String_Color_Rarity(item.rarity) + item.Item_Name);
 
         if (Legendary_Coroutine != null)
         {

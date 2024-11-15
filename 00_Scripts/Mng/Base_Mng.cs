@@ -19,6 +19,7 @@ public class Base_Mng : MonoBehaviour
     private static Firebase_Mng s_Firebase = new Firebase_Mng();
     private static IAP_Mng s_IAP = new IAP_Mng();
     private static Sound_Mng s_Sound = new Sound_Mng();
+    private static Local_Mng s_Local = new Local_Mng();
     public static Pool_Mng Pool { get { return s_Pool; } }
     public static Player_Mng Player { get { return s_Player; } }
     public static Data_Mng Data { get { return s_Data; } }
@@ -29,6 +30,7 @@ public class Base_Mng : MonoBehaviour
     public static Firebase_Mng Firebase { get { return s_Firebase; } }
     public static IAP_Mng IAP { get { return s_IAP; } }
     public static Sound_Mng Sound { get { return s_Sound; } }
+    public static Local_Mng Local { get { return s_Local; } }
     #endregion
 
     public static bool isFast = false;
@@ -72,6 +74,7 @@ public class Base_Mng : MonoBehaviour
             Firebase.Init();
             IAP.InitUnityIAP();
             Sound.Init();
+            Local.Init();
 
             DontDestroyOnLoad(this.gameObject);
         }
