@@ -45,6 +45,8 @@ public class Base_Canvas : MonoBehaviour
         });
         ADSBUFF_BUTTON.onClick.AddListener(() => Get_UI("#ADS_Buff"));
         SETTING_BUTTON.onClick.AddListener(() => Get_UI("#Setting"));
+        DAILYQUEST_BUTTON.onClick.AddListener(() => Get_UI("#DailyQuest"));
+        ACHIEVEMENT_BUTTON.onClick.AddListener(() => Get_UI("#Achievement"));
     }
 
     public Transform COIN;
@@ -61,7 +63,9 @@ public class Base_Canvas : MonoBehaviour
         INVENTORY_BUTTON, 
         SAVINGMODE_BUTTON,
         ADSBUFF_BUTTON,
-        SETTING_BUTTON;
+        SETTING_BUTTON,
+        DAILYQUEST_BUTTON,
+        ACHIEVEMENT_BUTTON;
 
     [HideInInspector] public PopUp_UI popup = null;
     [HideInInspector] public UI_Base m_UI;
@@ -114,6 +118,7 @@ public class Base_Canvas : MonoBehaviour
             return;
         }
         Main_UI.instance.LayerCheck(value);
+        Debug.Log(temp);
         GetPopupUI(temp, Back);
     }
 

@@ -1,4 +1,17 @@
 
+public enum Achievement_Type
+{
+    Hero,
+    Relic
+}
+public enum DailyQuest_Type
+{
+    DailyAttendance,
+    LevelUpButton,
+    Summon,
+    ADS,
+    Dungeon
+}
 public enum Sound
 {
     BGM,
@@ -20,7 +33,7 @@ public enum Status_Holder
     ITEM, // 아이템 드랍률
     SKILL, // 스킬 쿨타임
     ATK_SPEED, // 공격 속도
-    CRITICAL_P, // 크리티컬 퍼센티이지
+    CRITICAL_P, // 크리티컬 퍼센테이지
     CRITICAL_D // 크리티컬 데미지
 }
 public enum Coin_Type

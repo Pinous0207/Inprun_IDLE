@@ -33,6 +33,7 @@ public class LevelUpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void EXP_UP()
     {
+        Data_Mng.m_Data.LevelUp++;
         Base_Mng.Player.EXP_UP();
         InitEXP();
         transform.DORewind();

@@ -55,6 +55,7 @@ public class UI_Dungeon : UI_Base
         }
         Stage_Mng.DungeonLevel = Level[value];
         Stage_Mng.State_Change(Stage_State.Dungeon, value);
+        Data_Mng.m_Data.Dungeon++;
         Utils.CloseAllPopupUI();
     }
 

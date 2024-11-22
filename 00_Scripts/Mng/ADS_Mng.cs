@@ -77,6 +77,8 @@ public class ADS_Mng
     public void ShowRewardedAds(Action rewardCallback)
     {
         _rewardedCallback = rewardCallback;
+        
+        Data_Mng.m_Data.ADS++;
 
         if(Data_Mng.m_Data.ADS_Remove)
         {

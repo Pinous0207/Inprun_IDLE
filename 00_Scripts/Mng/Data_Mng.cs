@@ -66,6 +66,15 @@ public class Data
 
     public bool ADS_Remove = false;
 
+    // DailyQuest
+    public int DailyAttendance = 1;
+    public int LevelUp;
+    public int ADS;
+    public int Dungeon;
+    public int Summon;
+
+    public bool[] DailyQuests = new bool[5];
+    public bool[] Achievement_B = new bool[5];
 }
 public class Data_Mng
 {

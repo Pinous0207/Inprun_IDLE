@@ -79,6 +79,8 @@ public class UI_Gacha : UI_Base
         {
             Data_Mng.m_Data.Hero_Summon_Count++;
             Data_Mng.m_Data.Hero_PickUp_Count++;
+            Data_Mng.m_Data.Summon++;
+
             Rarity rarity = Rarity.Common;
             if (Data_Mng.m_Data.Hero_PickUp_Count >= 110)
             {

@@ -98,9 +98,18 @@ public partial class Firebase_Mng
                 {
                     data.Key[0] = 2;
                     data.Key[1] = 2;
+
+                    data.DailyAttendance = 1;
+                    data.LevelUp = 0;
+                    data.Dungeon = 0;
+                    data.ADS = 0;
+                    data.Summon = 0;
+
+                    for (int i = 0; i < data.DailyQuests.Length; i++) data.DailyQuests[i] = false;
                 }
 
                 Data_Mng.m_Data = data;
+                Base_Mng.Quest.Init();
                 LoadingScene.instance.LoadingMain();
             }
             else

@@ -20,6 +20,7 @@ public class Base_Mng : MonoBehaviour
     private static IAP_Mng s_IAP = new IAP_Mng();
     private static Sound_Mng s_Sound = new Sound_Mng();
     private static Local_Mng s_Local = new Local_Mng();
+    private static Quest_Mng s_Quest = new Quest_Mng();
     public static Pool_Mng Pool { get { return s_Pool; } }
     public static Player_Mng Player { get { return s_Player; } }
     public static Data_Mng Data { get { return s_Data; } }
@@ -31,6 +32,7 @@ public class Base_Mng : MonoBehaviour
     public static IAP_Mng IAP { get { return s_IAP; } }
     public static Sound_Mng Sound { get { return s_Sound; } }
     public static Local_Mng Local { get { return s_Local; } }
+    public static Quest_Mng Quest { get { return s_Quest; } }
     #endregion
 
     public static bool isFast = false;
