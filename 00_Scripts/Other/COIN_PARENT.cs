@@ -44,7 +44,11 @@ public class COIN_PARENT : MonoBehaviour
             childs[i].GetComponent<Image>().sprite = Utils.Get_Atlas(type.ToString());
             childs[i].anchoredPosition = Vector2.zero;
         }
-        transform.parent = Base_Canvas.instance.HOLDER_LAYER(0);
+        transform.SetParent(Base_Canvas.instance.HOLDER_LAYER(0), false);
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            Debug.Log(transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition);
+        }
         switch(type)
         {
             case Coin_Type.Gold:

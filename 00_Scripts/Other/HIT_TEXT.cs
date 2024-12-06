@@ -30,7 +30,7 @@ public class HIT_TEXT : MonoBehaviour
 
         m_Text.color = color;
 
-        transform.SetParent(Base_Canvas.instance.HOLDER_LAYER(1));
+        transform.SetParent(Base_Canvas.instance.HOLDER_LAYER(1), false);
 
         m_Critical.SetActive(Critical);
 

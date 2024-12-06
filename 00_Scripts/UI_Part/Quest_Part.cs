@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
 using UnityEngine.UI;
 public class Quest_Part : MonoBehaviour
 {
