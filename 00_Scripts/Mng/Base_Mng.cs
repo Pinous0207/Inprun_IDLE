@@ -21,6 +21,7 @@ public class Base_Mng : MonoBehaviour
     private static Sound_Mng s_Sound = new Sound_Mng();
     private static Local_Mng s_Local = new Local_Mng();
     private static Quest_Mng s_Quest = new Quest_Mng();
+    private static Time_Mng s_Time = new Time_Mng();
     public static Pool_Mng Pool { get { return s_Pool; } }
     public static Player_Mng Player { get { return s_Player; } }
     public static Data_Mng Data { get { return s_Data; } }
@@ -33,6 +34,7 @@ public class Base_Mng : MonoBehaviour
     public static Sound_Mng Sound { get { return s_Sound; } }
     public static Local_Mng Local { get { return s_Local; } }
     public static Quest_Mng Quest { get { return s_Quest; } }
+    public static Time_Mng m_Time { get { return s_Time; } }
     #endregion
 
     public static bool isFast = false;
@@ -77,6 +79,7 @@ public class Base_Mng : MonoBehaviour
             IAP.InitUnityIAP();
             Sound.Init();
             Local.Init();
+            m_Time.Init();
 
             DontDestroyOnLoad(this.gameObject);
         }

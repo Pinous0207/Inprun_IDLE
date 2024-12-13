@@ -18,8 +18,8 @@ public partial class Firebase_Mng
         if (Data_Mng.m_Data != null)
         {
             data = Data_Mng.m_Data;
-            DateTime LastDate = DateTime.Parse(data.EndDate);
-            data.EndDate = DateTime.Now.ToString();
+            DateTime LastDate = DateTime.Parse(data.EndDate); 
+            data.EndDate = Timer_NTP.NowTime.ToString();
 
             if(GetDateItem(LastDate, DateTime.Now))
             {
@@ -88,7 +88,7 @@ public partial class Firebase_Mng
                 {
                     data = default_data;
                 }
-                data.StartDate = DateTime.Now.ToString();
+                data.StartDate = Timer_NTP.NowTime.ToString();
                 Debug.Log(data.StartDate + " : 시작 시간");
 
                 DateTime startDate = DateTime.Parse(data.StartDate);

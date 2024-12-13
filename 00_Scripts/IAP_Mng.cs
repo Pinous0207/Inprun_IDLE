@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.Purchasing;
 
 public class IAP_Mng : IStoreListener
@@ -68,5 +69,31 @@ public class IAP_Mng : IStoreListener
         {
             Debug.Log("상품이 없거나 현재 구매가 불가능합니다.");
         }
+    }
+
+    public void RestorePurchase()
+    {
+       if(storeController == null)
+        {
+            Debug.Log("IAP is not initalized.");
+            return;
+        }
+
+        if(Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            storeExtensionProvider.GetExtension<IAppleExtensions>().RestoreTransactions(result =>
+            {
+                Debug.Log("Restore Purchase completed : " + result);
+            });
+        }
+        else
+        {
+            Debug.Log("Restore Purchase is not supported on this platform");
+        }
+    }
+
+    public Product GetProduct(string _productId)
+    {
+        return storeController.products.WithID(_productId);
     }
 }

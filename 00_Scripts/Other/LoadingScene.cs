@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 public class LoadingScene : MonoBehaviour
 {
     public static LoadingScene instance = null;
     private void Awake()
     {
         if (instance == null) instance = this;
+
+
     }
 
     GameObject sliderParent;

@@ -10,6 +10,7 @@ public class UI_Setting : UI_Base
     public Image CheckBox;
     public GameObject ChangeLanguagePanel;
     public TextMeshProUGUI NoneChangeText, GetChangeText;
+    public Button Restorebutton;
     string saveLang;
     public void GetChangeLanguage(string lang)
     {
@@ -33,6 +34,11 @@ public class UI_Setting : UI_Base
         VFX.value = Base_Mng.Sound.VFXValue;
         
         CameraShakeCheck();
+
+#if UNITY_IOS
+        Restorebutton.gameObject.SetActive(true);
+        Restorebutton.onClick.AddListener(() => Base_Mng.IAP.RestorePurchase());
+#endif
 
         return base.Init();
     }
